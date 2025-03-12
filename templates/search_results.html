@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Search Results</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Search Results</h1>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="alert alert-warning">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        {% if results %}
+            <ul class="list-group mt-3">
+                {% for physician in results %}
+                    <li class="list-group-item">
+                        Dr. {{ physician.FirstName }} {{ physician.LastName }} - 
+                        Hospital: {{ physician.HospitalAttached }}<br>
+                        Requested Date: {{ physician.DateRequested }}<br>
+                        Requested Time: {{ physician.TimeRequested }}<br>
+                        <a href="{{ url_for('create_appointment') }}" class="btn btn-primary mt-2">Create Appointment</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No physicians found matching your criteria.</p>
+        {% endif %}
+
+        <a href="{{ url_for('search_physician') }}" class="btn btn-secondary mt-3">Search Again</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

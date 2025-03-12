@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h1>Welcome to CareConnect</h1>
+        <p class="lead">Connect with the Nearest Physician for Home Care Visit</p>
+
+        <div class="mt-4">
+            <h4>Register as Patient or Physician</h4>
+            <div class="d-grid gap-2">
+                <a href="{{ url_for('register_patient') }}" class="btn btn-primary mb-2">Register as Patient</a>
+                <a href="{{ url_for('patient_login') }}" class="btn btn-secondary mb-2">Sign In as Patient</a>
+                <a href="{{ url_for('register_physician') }}" class="btn btn-success mb-2">Register as Physician</a>
+                <a href="{{ url_for('physician_login') }}" class="btn btn-secondary mb-2">Sign In as Physician</a>
+            </div>
+        </div>
+
+        <hr class="my-4">
+        
+        <h2>Our Services</h2>
+        <p>At CareConnect, we provide a variety of services tailored to your health needs. Our network of qualified physicians is ready to assist you.</p>
+        <ul class="list-group mb-5">
+            <li class="list-group-item">General Health Check-ups</li>
+            <li class="list-group-item">Pediatric Care</li>
+            <li class="list-group-item">Geriatric Services</li>
+            <li class="list-group-item">Chronic Disease Management</li>
+            <li class="list-group-item">Physical Therapy</li>
+            <li class="list-group-item">Home Vaccination Services</li>
+        </ul>
+
+        <h2>How It Works</h2>
+        <p>Getting started is easy! Just follow these simple steps:</p>
+        <ol class="text-left">
+            <li>Register as a Patient or Physician.</li>
+            <li>Fill out the necessary details to create your profile.</li>
+            <li>Search for nearby physicians based on your requirements.</li>
+            <li>Book appointments conveniently through our platform.</li>
+        </ol>
+
+        <hr class="my-4">
+
+        <h2>Testimonials</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <p class="card-text">"CareConnect made it easy for me to find a physician when I needed it most. Highly recommend!"</p>
+                        <footer class="blockquote-footer">Jane Charles, <cite title="Source Title">Satisfied Patient</cite></footer>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <p class="card-text">"As a physician, I appreciate the ability to connect with patients directly at home!"</p>
+                        <footer class="blockquote-footer">Dr. John Smith, <cite title="Source Title">Family Physician</cite></footer>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <p class="card-text">"A wonderful service that truly cares about patient health and convenience."</p>
+                        <footer class="blockquote-footer">Emily White, <cite title="Source Title">Happy User</cite></footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mt-5">
+            <p>&copy; 2024 CareConnect. All Rights Reserved.</p>
+            <a href="#" class="text-decoration-none">Privacy Policy</a> | 
+            <a href="#" class="text-decoration-none">Terms of Service</a>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
